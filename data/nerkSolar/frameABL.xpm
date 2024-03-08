@@ -1,0 +1,37 @@
+/* XPM */
+static char *frameABL[] = {
+/* columns rows colors chars-per-pixel */
+"27 27 4 1 ",
+"  c #44446B",
+". c #63639C",
+"X c #8484C1",
+"o c #EFEFEF",
+/* pixels */
+"X     ooooooooooooooooooooo",
+"XXXXX ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... ooooooooooooooooooooo",
+"XX... XXXXXXXXXXXXXXXXXXXXX",
+"XX....................... X",
+"XX....................... X",
+"XX....................... X",
+"XX                        X",
+"X                          "
+};
