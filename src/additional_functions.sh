@@ -25,3 +25,33 @@ function setPackMan ()
         exit 1
     fi
 }
+
+function selectModules ()
+{
+    modules=(./src/modules/*.sh)
+    result=()
+
+    for file in "${modules[@]}"
+    do
+        file_without_extension="${file%.sh}"
+        notif "Would you like to enable module $file_without_extension (y/n):"
+        read USER_INP
+
+        if [[ $USER_INP == "y" ]] || [[ $USER_INP == "Y" ]]
+        then
+            result+=(true)
+        else
+            result+=(false)
+        fi
+    done
+
+    for ((i=0; i < ${#modules}; i++))
+    do
+        result=${result[i]}
+        if [[ result -eq true ]]
+        then
+            module=${modules[i]}
+            source "./src/modules/${module}"
+        fi
+    done
+}

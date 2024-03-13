@@ -3,6 +3,7 @@
 # --- definitions ---
 
 SRC_ROOT="./src/"
+MODULE_ROOT="./src/modules/"
 DATA_ROOT="./data/"
 
 # --- config ---
@@ -16,13 +17,33 @@ source "${SRC_ROOT}additional_functions.sh"
 
 setPackMan
 
-# start install both through package manager and manual install
+# --- Set install type ---
 
-notif "Starting install of solarOS using $PACKAGE_MANAGER"
+notif "Which type of install?:\n1) Core install (DM,WM,LOGIN,THEME)\n2) Standard install\n3) Full install (Includes optional module [devtools, WMs, etc...])\n4) Custom install"
+read USER_INP
+if [[ USER_INP == "1" ]]
+then
+    notif "Starting Core install of solarOS using $PACKAGE_MANAGER"
+    source "${MODULE_ROOT}preinstall.sh"
+    source "${MODULE_ROOT}core.sh"
+    source "${MODULE_ROOT}daemons.sh"
+else if [[ USER_INP == "2" ]]
+then
+    notif "Starting Standard install of solarOS using $PACKAGE_MANAGER"
+    source "${MODULE_ROOT}preinstall.sh"
+    source "${MODULE_ROOT}core.sh"
+    source "${MODULE_ROOT}daemons.sh"
+    source "${MODULE_ROOT}programs.sh"
+else if [[ USER_INP == "3" ]]
+then
+    notif "Starting Full install of solarOS using $PACKAGE_MANAGER"
+    source "${MODULE_ROOT}preinstall.sh"
+    source "${MODULE_ROOT}core.sh"
+    source "${MODULE_ROOT}daemons.sh"
+    source "${MODULE_ROOT}programs.sh"
+    source "${MODULE_ROOT}optional.sh"
+else if [[ USER_INP == "4" ]]
+    notif "Starting Custom install of solarOS using $PACKAGE_MANAGER"
+    selectModules
+fi
 
-source "${SRC_ROOT}services_install.sh"
-
-# install additional install targets
-
-notif "Installing additional install targets"
-eval "$installer $INSTALL_TARGETS"
