@@ -2,3 +2,4 @@
 - [ ] Git pull for themes
     - [ ] Add themes directory
 - [ ] Change OhMyZSH configuration
+- [ ] Change module execution report to a log file.

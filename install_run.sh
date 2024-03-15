@@ -44,8 +44,14 @@ then
     notif "Starting Full install of solarOS using $PACKAGE_MANAGER"
     source "${MODULE_ROOT}preinstall.sh"
     source "${MODULE_ROOT}core.sh"
+    echo "PRESS ANY TO CONTINUE"
+    read debug_wait_1
     source "${MODULE_ROOT}daemons.sh"
+    echo "PRESS ANY TO CONTINUE"
+    read debug_wait_2
     source "${MODULE_ROOT}programs.sh"
+    echo "PRESS ANY TO CONTINUE"
+    read debug_wait_3
     source "${MODULE_ROOT}optional.sh"
 elif [[ "$USER_INP" == "4" ]]
 then
