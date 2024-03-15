@@ -19,7 +19,12 @@ setPackMan
 
 # --- Set install type ---
 
-notif "Which type of install?:\n1) Core install (DM,WM,LOGIN,THEME)\n2) Standard install\n3) Full install (Includes optional module [devtools, WMs, etc...])\n4) Custom install"
+notif "Which type of install?:"
+notif "1) Core install (DM,WM,LOGIN,THEME)"
+notif "2) Standard install"
+notif "3) Full install (Includes optional module [devtools, WMs, etc...])"
+notif "4) Custom install"
+
 read USER_INP
 if [[ USER_INP == "1" ]]
 then

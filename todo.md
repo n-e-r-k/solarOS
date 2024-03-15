@@ -1,0 +1,4 @@
+- [ ] Change startup python configuration
+- [ ] Git pull for themes
+    - [ ] Add themes directory
+- [ ] Change OhMyZSH configuration
