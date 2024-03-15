@@ -32,14 +32,14 @@ then
     source "${MODULE_ROOT}preinstall.sh"
     source "${MODULE_ROOT}core.sh"
     source "${MODULE_ROOT}daemons.sh"
-else if [[ "$USER_INP" == "2" ]]
+elif [[ "$USER_INP" == "2" ]]
 then
     notif "Starting Standard install of solarOS using $PACKAGE_MANAGER"
     source "${MODULE_ROOT}preinstall.sh"
     source "${MODULE_ROOT}core.sh"
     source "${MODULE_ROOT}daemons.sh"
     source "${MODULE_ROOT}programs.sh"
-else if [[ "$USER_INP" == "3" ]]
+elif [[ "$USER_INP" == "3" ]]
 then
     notif "Starting Full install of solarOS using $PACKAGE_MANAGER"
     source "${MODULE_ROOT}preinstall.sh"
@@ -47,7 +47,7 @@ then
     source "${MODULE_ROOT}daemons.sh"
     source "${MODULE_ROOT}programs.sh"
     source "${MODULE_ROOT}optional.sh"
-else if [[ "$USER_INP" == "4" ]]
+elif [[ "$USER_INP" == "4" ]]
 then
     notif "Starting Custom install of solarOS using $PACKAGE_MANAGER"
     selectModules
