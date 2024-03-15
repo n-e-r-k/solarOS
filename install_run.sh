@@ -48,7 +48,7 @@ then
     source "${MODULE_ROOT}programs.sh"
     source "${MODULE_ROOT}optional.sh"
 else if [[ "$USER_INP" == "4" ]]
+then
     notif "Starting Custom install of solarOS using $PACKAGE_MANAGER"
     selectModules
 fi
-
