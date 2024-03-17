@@ -5,9 +5,12 @@
 # - Window manager
 # - Shell
 
-# --- LY ---
+BASEDIR=$PWD
 
-BASEDIR=$(PWD)
+echo "BASE DIR IS ${BASEDIR} (Press any key to continue)"
+read userhalt
+
+# --- LY ---
 
 notif "Installing LY display manager..."
 
@@ -24,7 +27,6 @@ sudo systemctl enable ly.service
 sudo systemctl disable getty@tty2.service
 
 cd /tmp/solarOSbuild
-cd $BASEDIR
 
 # --- zsh ---
 
@@ -67,7 +69,8 @@ then
 	mkdir -p /home/${USER}/.config/icewm/themes
 fi
 
-OLDPWD=$PWD
 cd /home/${USER}/.config/icewm/themes
 git clone https://github.com/n-e-r-k/SolarICE
-cd ${OLDPWD}
+
+
+cd ${BASEDIR}
