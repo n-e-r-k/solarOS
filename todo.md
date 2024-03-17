@@ -3,3 +3,4 @@
     - [ ] Add themes directory
 - [ ] Change OhMyZSH configuration
 - [ ] Change module execution report to a log file.
+- [ ] Change how keeping original path works in core.sh

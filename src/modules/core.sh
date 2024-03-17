@@ -7,6 +7,8 @@
 
 # --- LY ---
 
+BASEDIR=$(PWD)
+
 notif "Installing LY display manager..."
 
 eval "$installer build-essential libpam0g-dev libxcb-xkb-dev"
