@@ -8,7 +8,7 @@ eval "$installer xterm alacritty"
 
 # --- accessories ---
 
-eval "$installer nmap vlc thunar htop"
+eval "$installer nmap vlc thunar htop firefox-esr tldr"
 
 # --- languages ---
 
